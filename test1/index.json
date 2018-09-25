@@ -1,0 +1,35 @@
+{
+  "title": "Web Server within Docker",
+  "description": "Build a docker image and run a web server nginx within it",
+  "details": {
+    "steps": [
+      { "title": "Build the docker", "text": "step1.md",
+        "code": "env-init.sh" }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "Dockerfile",
+          "target": "~/"
+        },
+        {
+          "file": "index.html",
+          "target": "~/"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal-iframe",
+    "dashboards": [{ "name": "Browser", "port": 80, "host": "host01" }]
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
